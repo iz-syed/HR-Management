@@ -1,0 +1,130 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset and dependencies
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+// Core CSS
+@import "bootstrap/scaffolding"; 
+@import "bootstrap/type";
+@import "bootstrap/code";  
+@import "bootstrap/grid";
+
+// Compass css3 components
+@import "compass/css3";
+
+// CSS3 Animation
+@import "CSS:css/animate";
+// @import "CSS:css/jquery-ui";
+
+// Slick Slider
+@import "slick";
+
+// Font awsome css
+@import "font-awesome/font-awesome";
+
+// Common css
+@import "variables";
+@import "common";
+@import "fonts";
+
+/// Base path for assets (fonts, images...),
+/// should not include trailing slash
+/// @access public
+/// @type String
+
+$asset-base-path: '../assets' !default;
+
+/// Asset URL builder
+/// @access private
+/// @param {String} $type - Asset type, matching folder name
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the asset
+@function asset($type, $file) {
+  @return url($asset-base-path + '/' + $type + '/' + $file);
+}
+
+/// Image asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the image
+/// @require {function} asset
+@function image($file) {
+  @return asset('img', $file);
+}
+
+/// Font asset helper
+/// @access public
+/// @param {String} $file - Asset file name, including extension
+/// @return {URL} - A `url()` function leading to the font
+/// @require {function} asset
+@function font($file) {
+  @return asset('fonts', $file);
+}
+
+
+
+/* Basic CSS */
+
+.tb-row { display:table;}
+.tb-cell { display:table-cell; vertical-align:middle;}
+
+
+
+// Table
+
+.tableView {
+  padding:45px 0;
+
+  h1 { 
+    padding-bottom:25px; }
+
+    .tableSite {
+      th, td {
+        border:1px solid $brown; 
+        text-align:center; 
+        padding:15px 10px;
+      }
+
+      th:last-child {
+        text-align: left; 
+        padding-left: 20px;
+      }
+    }
+    
+    .imageAside p:last-of-type { 
+      padding-bottom:0; }
+}
+
+
+
+
+
+// Generic Slide
+.genericSlide {  /*max-width: 650px;*/  margin:0 auto }
+.capImg { font-size:12px; padding-top:5px; }
+
+.triangleArrow.slick-prev, .triangleArrow.slick-next { border:none; cursor:pointer; margin-top:-48px; position:absolute; top:50%; width:39px; }
+.triangleArrow.slick-prev { left:-1px; }
+.triangleArrow.slick-next { right:-1px; text-align:right; }
+
+
+@media screen and (max-width:540px) {
+	.tableSite thead { display:none; }
+	.tableSite td { border:none; display:block; position: relative; padding-left: 40%; text-align: left; }
+	.tableSite td:before { content:attr(data-title); position: absolute; left: 15px; width: 40%; }
+	.tableSite td:last-child { border-bottom:2px solid #d5cdbd; padding-left:40%; width:100%; }
+}
+
+// [data-role="banner"] {
+//     min-height: 600px;
+//     background-image: image('images/banner/default.png');
+//     background-size: 100% auto;
+//     background-color:$pink ;
+
+// }
+
+svg.custom-svg { width:150px; height:150px}
+svg.custom-svg path {fill: $green !important; stroke:$white !important;}
