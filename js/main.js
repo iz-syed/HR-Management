@@ -22,7 +22,7 @@
 
 	/* Ready Function */
 $(function(){
-	console.log('HR Management');
+	console.log('HR Management ..!');
 
 	// SVG Replace
 
@@ -58,7 +58,7 @@ $(function(){
     
         }, 'xml');
     
-    });
+    }); // SVG Replace
 
 
 /* Functions */
@@ -68,6 +68,9 @@ $(function(){
 	$('body').animate({opacity:1},1000);
 	/* Scroll Animation */ 
 	$('*[data-animated]').addClass('animated');
+
+	$('.leftCol > .sidebar').matchHeight();
+
 	/* Animate */	
 	function animated_contents() {
 		$(".animated:appeared").each(function (i) {
@@ -195,6 +198,7 @@ $(function(){
 	 *		<li><a href="javascript:void(0);">Value</a></li>
 	 *	</nav>
 	/**********************************************/
+
 
 
 

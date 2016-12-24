@@ -24,11 +24,11 @@
 
 // Font awsome css
 @import "font-awesome/font-awesome";
+@import "fonts";
 
 // Common css
 @import "variables";
 @import "common";
-@import "fonts";
 
 /// Base path for assets (fonts, images...),
 /// should not include trailing slash
@@ -128,3 +128,58 @@ $asset-base-path: '../assets' !default;
 
 svg.custom-svg { width:150px; height:150px}
 svg.custom-svg path {fill: $green !important; stroke:$white !important;}
+
+
+
+// custom codes
+
+.logo {
+  border-bottom: 3px solid $green;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.sidebar {
+  min-height: 100vh;
+  background-color:$primary;
+  @include background-image(linear-gradient($primary, #23599f));
+  // margin-left: -15px;
+  // margin-right: -15px;
+
+  nav {
+    margin-top: 50px;
+    // padding-left: 15px;
+    // padding-right: 15px;
+    li {
+      a {
+        color:$white;
+        font-size:14px;
+        display: block;
+        line-height: 42px;
+        text-transform: uppercase;
+
+        i {
+          width:32px; 
+          text-align:center
+        }
+
+      }
+      border-bottom:1px solid rgba($white, 0.1);
+      @include transition(background-color .3s ease);
+      padding:0 15px;
+
+      &:hover {
+          background-color: rgba($white, 0.1);
+        }
+    }
+  }
+}
+
+// Global assetes
+
+
+
+

@@ -12,4 +12,5 @@ sass_dir = "sass"
 images_dir = "images"
 javascripts_dir = "js"
 line_comments = false
-output_style = :compressed
+output_style = :nested
+# output_style = :compressed

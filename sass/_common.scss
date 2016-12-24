@@ -1,4 +1,9 @@
 // Common styles
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+}
 *,
 *:before,
 *:after {
@@ -46,6 +51,8 @@ ol, ul {
 	 }
 
 
+
+
 .clear { 
 	clear:both; }
 
@@ -84,7 +91,9 @@ ol, ul {
 
 // Type
 p { 
-	padding-bottom:15px; }
+	padding-bottom:15px;
+	font-size:18px;
+	font-family: $subfont; }
 
 .center-block {
   display: block;
@@ -104,7 +113,7 @@ html {
 
 body { 
 	background-color:$white-semi; 
-	color:$brown; 
+	color:$secondary; 
 	font-family:$bodyfont;
 	font-size:$size; 
 	font-weight:$wgt; 
@@ -123,14 +132,67 @@ body {
 
 // Then call it with the rules/styles you want wherever you want (As long as the file/include has access to the above function of course).
 #{headings(1,6)} {
-  color: $brown;
+  color: $secondary;
 }
 
 #{headings(1,3)} {
-  //border-bottom:1px solid $brown;
   margin-bottom:5px;
   padding-bottom:15px;
+  // color:$primary;
 }
+
+h1 { color:$primary; font-weight: bold; font-size: 36px;}
+h2 { font-size: 30px; font-family:$subfont;}
+h3 { font-size: 26px;}
+h4 {}
+h5 {}
+h6 {}
+
+
+.btn {
+	background-color:$primary;
+	@include border-radius(50px);
+	color:$white;
+	font-size:16px;
+	padding:5px 15px;
+	border:2px solid transparent;
+
+	&:focus, &:hover, &.active {
+		// outline: thin dotted;
+  		// 	outline: 5px auto -webkit-focus-ring-color;
+  		// 	outline-offset: -2px;
+  		background-color:rgba($primary, 0.1);
+  		color:$primary;
+  		@include transition(background-color .3s ease);
+  		border-color:rgba($primary, 1);
+	 } // .btn:focus
+	
+	} // .btn
+
+	a.btn {
+		border-width:1px;
+	}
+
+	.btn-lg {
+	  padding: 10px 26px;
+	  font-size: 18px;
+	  line-height: 1.33;
+	}
+	.btn-sm {
+	  padding: 5px 20px;
+	  font-size: 12px;
+	  line-height: 1.5; }
+	.btn-xs {
+	  padding: 1px 10px;
+	  font-size: 12px;
+	  line-height: 1.5; }
+	.btn-block {
+	  display: block;
+	  width: 100%;
+	  padding-right: 0;
+	  padding-left: 0; }
+	.btn-block + .btn-block {
+	  margin-top: 5px; }
 
 // Transitions
 
@@ -143,7 +205,7 @@ body {
 }
 
 a { 
-	color:$brown; 
+	color:$primary; 
 	@include transition(color .3s ease);
 	&:hover { 
 		color:$black; }
@@ -192,13 +254,13 @@ a {
 
 	.ui-accordion-header { 
 		border:0; 
-		border-bottom:1px solid $brown; 
+		border-bottom:1px solid $primary; 
 		position: relative; 
 		cursor: pointer;  
 		outline:none; 
 
 		&:after {
-			content:'\f204'; color:$brown; 
+			content:'\f204'; color:$primary; 
 			font-family:'FontAwesome';
 			font-size:$fa-font-size-base;
 			line-height: $fa-line-height-base;
@@ -223,11 +285,11 @@ a {
 	ul {
 		@include clearfix;
 		padding:0 15px;
-		border-bottom:1px solid $brown;
+		border-bottom:1px solid $primary;
 		margin-bottom: 15px;
 		li {
-			border:1px solid $brown;
-			background-color: rgba($brown, 0.5);
+			border:1px solid $primary;
+			background-color: rgba($primary, 0.5);
 			display: inline-block;
 			margin:0 5px -1px -2px;
 			padding:5px 0;
@@ -241,7 +303,7 @@ a {
 			}
 
 			&.ui-state-active {
-				background-color: rgba($brown, 0.8);
+				background-color: rgba($primary, 0.8);
 
 			}
 		}
@@ -257,10 +319,10 @@ a {
 
 	&:after { 
 		content:""; 
-		width:15px; 
-		height:15px; 
-		background-color:rgba($brown, 0); 
-		border:3px solid rgba($brown, 1); 
+		width:18px; 
+		height:18px; 
+		background-color:rgba($primary, 0); 
+		border:3px solid rgba($primary, 1); 
 		@include border-radius(50%);
 		position:absolute; 
 		right:10px; 
@@ -270,8 +332,13 @@ a {
 
 .ui-state-active.custom-radio:after,
 .ui-state-active.custom-checkbox:after { 
-	background-color:$brown; 
-	border:3px solid rgba($brown, 0.5); 
+	background-color:rgba($primary, 1); 
+	border:3px solid rgba($primary, 1); 
+	// @include border-shadow(inset 0 0 0px 2px $white);
+
+	box-shadow: inset 0 0 0px 2px $white;
+	-webkit-box-shadow: inset 0 0 0px 2px $white;
+	-moz-box-shadow: inset 0 0 0px 2px $white;
 }
 
 .custom-checkbox { 
@@ -281,7 +348,108 @@ a {
 }
 
 
+// Pagination
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+
+  li:first-child,
+  li:last-child{
+  	a {
+  		color:$secondary;
+
+  		&:hover {
+  			background-color:transparent;
+  			color:$primary;
+
+  		}
+  	}
+  }
+
+  li {
+  	display: inline;
+
+	  &.active {
+	  	a {
+	  		@include border-radius(50%);
+	  	}
+	  }
+
+  	a {
+		position: relative;
+		float: left;
+		padding: 6px 14px;
+		margin-left: -1px;
+		line-height: 1.428571429;
+		color: $primary;
+		text-decoration: none;
+		background-color: $white;
+
+		&:hover {
+			z-index: 2;
+			color: $white;
+			cursor: default;
+			background-color: $primary;
+			@include border-radius(50%);
+		} // paginatation :hover
+  	} //  pagination a
+
+
+  } // pagination li
+
+}
+// .pagination > li {
+//   display: inline;
+// }
+// .pagination > li > a,
+// .pagination > li > span {
+//   position: relative;
+//   float: left;
+//   padding: 6px 12px;
+//   margin-left: -1px;
+//   line-height: 1.428571429;
+//   color: #428bca;
+//   text-decoration: none;
+//   background-color: #fff;
+//   border: 1px solid #ddd;
+// }
+// .pagination > li:first-child > a,
+// .pagination > li:first-child > span {
+//   // margin-left: 0;
+//   // border-top-left-radius: 4px;
+//   // border-bottom-left-radius: 4px;
+// }
+// .pagination > li:last-child > a,
+// .pagination > li:last-child > span {
+//   // border-top-right-radius: 4px;
+//   // border-bottom-right-radius: 4px;
+// }
+// .pagination > li > a:hover,
+// .pagination > li > span:hover,
+// .pagination > li > a:focus,
+// .pagination > li > span:focus {
+//   color: #2a6496;
+//   background-color: #eee;
+//   border-color: #ddd;
+// }
+// .pagination > .active > a,
+// .pagination > .active > span,
+// .pagination > .active > a:hover,
+// .pagination > .active > span:hover,
+// .pagination > .active > a:focus,
+// .pagination > .active > span:focus {
+//   z-index: 2;
+//   color: #fff;
+//   cursor: default;
+//   background-color: #428bca;
+//   border-color: #428bca;
+// }
+
 // .container { margin:0 auto; padding-left:15px; padding-right:15px;}
 @media (max-width: 1024px){
     // .container{width:auto}
+
 }
