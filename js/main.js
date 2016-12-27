@@ -188,7 +188,9 @@ $(function(){
 
 
 	 $( function() {
-    	$("#forGot").checkboxradio({ icon: false });	
+    	$("#forGot").checkboxradio({ icon: false });
+    	$(".radio").checkboxradio({ icon: false });
+    	$(".checkbox").checkboxradio({ icon: false });
   	} );
 
   // $( function() {
