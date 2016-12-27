@@ -36,7 +36,7 @@
 
 	/* Ready Function */
 $(function(){
-	console.log('HR Management ..!');
+	console.log('HR Management :D..');
 
 	// SVG Replace
 
@@ -180,7 +180,25 @@ $(function(){
     $('#tabs').tabs();
 
     // jQueryUI Check box + Radio Boxes
-    $('input').checkboxradio({ icon: false });
+   	$('checkbox').checkboxradio({ icon: false });
+   	$('radio').checkboxradio({ icon: false });
+
+
+   	
+
+
+	 $( function() {
+    	$("#forGot").checkboxradio({ icon: false });	
+  	} );
+
+  // $( function() {
+  //   $( "input" ).checkboxradio();
+  //   $( "fieldset" ).controlgroup();
+  // } );
+
+
+ // $("checkbox").checkboxradio();
+    
 	
 
 	// Anchor Target _Blank

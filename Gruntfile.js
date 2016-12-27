@@ -12,7 +12,7 @@ module.exports = function(grunt) {
               'js/lib/bootstrap.min.js',
               'js/lib/jquery.matchHeight-min.js',
               'js/lib/jquery.parallax-1.1.3.js',
-              'js/lib/jquery-ui.min.js',
+              'js/lib/jquery-ui.js',
               'js/lib/slick.min.js',
               'js/lib/smoothscroll.js',
               'js/main.js'

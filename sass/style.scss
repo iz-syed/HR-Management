@@ -192,12 +192,66 @@ svg.custom-svg path {fill: $green !important; stroke:$white !important;}
 
 .form-login {
   max-width:550px;
-  margin:0 auto;
+  height: 450px;
   background-color:white;
+  @include border-radius(5px);
+  position: absolute;
+  margin:auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding:40px 130px 60px;
 
-   @include border-radius(10px);
+  @media (max-width: $break-xs) {
+    padding-right:10px; 
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-top: 150px;
+    margin-right: 10px;
+    position:inherit;
+    height: inherit;
+  }
 
-}
+    .form-group {
+      margin-bottom: 15px;
+        input[type='text'],
+          input[type='password'] {
+            background-color:$white-half;
+          } // input
+       } // form-group
+
+       // label#forGot {
+       //  display: block;
+       //  width: 100%;
+       //  padding: 0 15px;
+
+       //  &:after {
+       //    right:15px;
+       //  }
+       // }
+
+       [for="forGot"] {
+         width:100%;
+
+         &:after {
+          right:0px;
+         }
+        }
+
+       
+        .icon-forgot {
+          border:1px solid rgba($secondary, 0.1);
+          background-color: rgba($primary, 0.1);
+          width:38px;
+          height:38px;
+          display:inline-block;
+          text-align:center;
+          line-height:38px; }
+
+} //form-login
+
+
 
 
 

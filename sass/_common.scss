@@ -148,6 +148,19 @@ h5 {}
 h6 {}
 
 
+// Media Quries
+
+$break-lg: 1200px;
+$break-md: 992px;
+$break-sm: 768px;
+$break-xs: 767px;
+
+// Example: @media (min-width: $break-lg) { }
+//          @media (min-width: $break-md) { }
+//          @media (max-width: $break-sm) { }
+//          @media (max-width: $break-xs) { }
+
+
 .btn {
 	background-color:$primary;
 	@include border-radius(50px);
@@ -192,6 +205,10 @@ h6 {}
 	  padding-left: 0; }
 	.btn-block + .btn-block {
 	  margin-top: 5px; }
+
+	.full-radius{ 
+		@include border-radius(50%);
+	}
 
 // Transitions
 
