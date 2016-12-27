@@ -35,10 +35,7 @@ a, a:focus, a:hover{text-decoration:none;}
 input[type="text"], input[type="submit"], 
 input[type="password"] { 
 	display:block; 
-	border-radius:0; 
-	-webkit-appearance:none; 
-	text-align:left; 
-	padding-left:0; }
+	-webkit-appearance:none;  }
 
 input[type="submit"] { 
 	text-align:center; }
@@ -109,7 +106,8 @@ p {
 
 html { 
 	background-color:$white; 
-	height: 100vh;}
+	// min-height: 100vh;
+}
 
 body { 
 	background-color:$white-semi; 
@@ -119,7 +117,8 @@ body {
 	font-weight:$wgt; 
 	line-height:$line; 
 	opacity:0;
-	height: 100vh; }
+	// height: 100vh; 
+}
 
 // Setup the function in your functions or helpers files, wherever you keep these bits.
 @function headings($from:1, $to:6) {
@@ -348,7 +347,7 @@ a {
 }
 
 
-// Pagination
+// Pagination Start
 
 .pagination {
   display: inline-block;
@@ -400,53 +399,53 @@ a {
 
   } // pagination li
 
+} // Pagination End
+
+
+// custom form elements Start
+form {
+
+	.error  {
+
+		position: relative;
+		
+		label + * {
+			border:1px solid $red;
+			@include border-bottom-right-radius(0px);
+
+			&:focus {
+				border:1px solid $red;	
+			} // label:focus
+		} // label
+
+		&:after {
+			content:"Something went wrong, please try again.";
+			color:$white;
+			background-color:$red;
+			float: right;
+			padding:0 15px;
+  			font-size:0.8em;
+  			font-weight:normal;
+			@include border-bottom-left-radius(3px);
+			@include border-bottom-right-radius(3px);
+			position: absolute;
+			right: 15px;
+			bottom: -24px;
+		} // error:after
+
+	} // error
+
+	[required]:after {
+		content:"*";
+		color:$red;
+		padding-left: 5px;
+	}
+
 }
-// .pagination > li {
-//   display: inline;
-// }
-// .pagination > li > a,
-// .pagination > li > span {
-//   position: relative;
-//   float: left;
-//   padding: 6px 12px;
-//   margin-left: -1px;
-//   line-height: 1.428571429;
-//   color: #428bca;
-//   text-decoration: none;
-//   background-color: #fff;
-//   border: 1px solid #ddd;
-// }
-// .pagination > li:first-child > a,
-// .pagination > li:first-child > span {
-//   // margin-left: 0;
-//   // border-top-left-radius: 4px;
-//   // border-bottom-left-radius: 4px;
-// }
-// .pagination > li:last-child > a,
-// .pagination > li:last-child > span {
-//   // border-top-right-radius: 4px;
-//   // border-bottom-right-radius: 4px;
-// }
-// .pagination > li > a:hover,
-// .pagination > li > span:hover,
-// .pagination > li > a:focus,
-// .pagination > li > span:focus {
-//   color: #2a6496;
-//   background-color: #eee;
-//   border-color: #ddd;
-// }
-// .pagination > .active > a,
-// .pagination > .active > span,
-// .pagination > .active > a:hover,
-// .pagination > .active > span:hover,
-// .pagination > .active > a:focus,
-// .pagination > .active > span:focus {
-//   z-index: 2;
-//   color: #fff;
-//   cursor: default;
-//   background-color: #428bca;
-//   border-color: #428bca;
-// }
+// custom form elements End
+
+
+
 
 // .container { margin:0 auto; padding-left:15px; padding-right:15px;}
 @media (max-width: 1024px){

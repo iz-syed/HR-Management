@@ -26,8 +26,10 @@
 @import "font-awesome/font-awesome";
 @import "fonts";
 
+
 // Common css
 @import "variables";
+@import "forms";
 @import "common";
 
 /// Base path for assets (fonts, images...),
@@ -124,7 +126,7 @@ $asset-base-path: '../assets' !default;
 //     background-size: 100% auto;
 //     background-color:$pink ;
 
-// }
+// } 
 
 svg.custom-svg { width:150px; height:150px}
 svg.custom-svg path {fill: $green !important; stroke:$white !important;}
@@ -179,6 +181,26 @@ svg.custom-svg path {fill: $green !important; stroke:$white !important;}
 }
 
 // Global assetes
+
+
+// default pages 
+
+.page-login {
+  background-color:#0d8dc1;
+  min-height: 100vh;
+}
+
+.form-login {
+  max-width:550px;
+  margin:0 auto;
+  background-color:white;
+
+   @include border-radius(10px);
+
+}
+
+
+
 
 
 

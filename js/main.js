@@ -17,6 +17,20 @@
 		$('body').addClass(classes); 
 	};
 
+
+	// File Upload
+	function showImagee(src,target) {
+	  var fr=new FileReader();
+	  // when image is loaded, set the src of the image where you want to display it
+	  fr.onload = function(e) { target.src = this.result; };
+	  
+	  src.addEventListener("change",function() {
+	    // fill fr with image data    
+	    fr.readAsDataURL(src.files[0]);
+	  });
+	}
+
+	
 // Global Function End
 
 
@@ -26,6 +40,12 @@ $(function(){
 
 	// SVG Replace
 
+	if( $("#src").length && $("#target").length )
+	{
+		var src = document.getElementById("src");
+		var target = document.getElementById("target");
+		showImagee(src, target);
+	};
 	$('img.svg').each(function(){
         var $img = $(this);
         var imgID = $img.attr('id');
@@ -198,6 +218,10 @@ $(function(){
 	 *		<li><a href="javascript:void(0);">Value</a></li>
 	 *	</nav>
 	/**********************************************/
+
+
+
+
 
 
 
