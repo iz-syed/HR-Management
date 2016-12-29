@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>HR Management Location</title>
+    <script src="js/modernizr-2.8.3.js"></script>
+    <!-- Bootstrap -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+<section class="container-fluid">
+  <div class="row">
+    <aside class="col-sm-3 col-md-2 leftCol">
+      <!-- / Sidebar -->
+      <div class="row sidebar">
+        
+        <div class="logo">
+          <h1>
+            <a href="index.html">
+              <img src="assets/images/logo.png" alt="HR Management" />
+            </a>
+          </h1>
+        </div>
+
+        <nav>
+          <ul class="sidebar-menu">
+            <li><a href="#0"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="#0"><i class="fa fa-users"></i> Organisation <i class="fa fa-angle-down trigger"></i></a>
+             <ul class="sidebar-submenu">
+                  <li><a href="">Organisation</a></li> 
+                  <li><a href="">Location</a></li>
+                  <li><a href="">Working Days</a></li>
+                  <li><a href="">Leave List</a></li>
+                  <li><a href="">Structure</a></li>
+            </ul>
+            </li>
+            <li><a href="#0"><i class="fa fa-user"></i> Employees <i class="fa fa-angle-down trigger"></i></a>
+            <ul class="sidebar-submenu">
+                  <li><a href="">Employees</a></li>
+                  <li><a href="">Employee Master</a></li>
+                  <li><a href="">Employee Taxes</a></li>
+                  <li><a href="">Manage Exits</a></li>
+                  <li><a href="">Preview Payroll</a></li>
+                  <li><a href="">More</a></li>
+            </ul>
+            </li>
+            <li><a href="#0"><i class="fa fa-clock-o"></i> Timesheet</a></li>
+            <li><a href="#0"><i class="fa fa-money"></i> Payroll <i class="fa fa-angle-down trigger"></i></a>
+            <ul class="sidebar-submenu">
+                  <li><a href="">Payroll</a></li> 
+                  <li><a href="">Listing</a></li>
+                  <li><a href="">Add</a></li>
+                  <li><a href="">Payslip View</a></li>
+            </ul>
+            </li>
+            <li><a href="#0"><i class="fa fa-sticky-note"></i> Reports <i class="fa fa-angle-down trigger"></i></a>
+            <ul class="sidebar-submenu">
+                  <li><a href="">Reports</a></li>
+                  <li><a href="">Employees Export</a></li>
+                  <li><a href="">Monthly Timesheet</a></li>
+                  <li><a href="">Monthly Payroll</a></li>
+            </ul>
+            </li>
+            
+          </ul>
+        </nav>
+        
+        
+        
+      </div>
+      <!-- Sidebar / -->
+
+    </aside>
+    <aside class="col-sm-9 col-md-10 cf">
+      
+       <div class="row">
+          <div class="bg-white">
+            <div class="top-search col-sm-11">
+              <div class="form-group">
+                <input type="search" name="" class="form-control" id="" placeholder="Search for Project & Professional">
+              </div>
+            </div>
+
+            <div class="top-search text-right col-xs-1">
+
+                <div class="user-pic">
+                  <a href="index.html">
+                    <img src="assets/images/default-user.jpg" alt="HR Management" />
+                  </a>
+                  
+                  <div class="dropdown custom-dropdwon">
+                    <button class="dropbtn"> <i class="fa fa-gear"></i></button>
+                      <div id="userSettings" class="dropdown-content" align="right">
+                      <a href="#my-list">My List</a>
+                      <a href="#settings">Settings</a>
+                      <a href="#signout">Sign Out</a>
+                      </div>
+                  </div>
+
+                </div>
+                
+            </div>
+          </div>
+
+        </div>
+        
+       <div class="row">
+          <div class="breadcrumbs">
+            <a href="#"><i class="fa fa-home"></i></a> 
+            <a href="#">Organisation</a> 
+          </div>
+        </div>
+
+        <div class="row">
+              <div id="tabs" data-role="tab">
+                  <ul>
+                    <li><a href="#tabs-1">Organisation</a></li>
+                    <li><a href="#tabs-2">Location</a></li>
+                    <li><a href="#tabs-3">Working Days</a></li>
+                    <li><a href="#tabs-4">Leave List</a></li>
+                    <li><a href="#tabs-5">Structure</a></li>
+                  </ul>
+                  <div id="tabs-1">
+                      <form>
+  <div class="form-grid">
+    
+    <div class="form-group col-md-4">
+      <label required>Organization Name</label>
+      <input type="text" name="" class="form-control" id="" placeholder="OrangeHRM(pvt)Ltd">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>Nimber of Employees</label>
+      <select class="form-control"> <option>11</option></select>
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>Tax ID</label>
+      <input type="text" name="" class="form-control" id="" placeholder="123456">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>Registration Number</label>
+      <input type="text" name="" class="form-control" id="" placeholder="A23456">
+    </div>
+    
+     <div class="form-group col-md-4">
+      <label>Phone</label>
+      <input type="text" name="" class="form-control" id="" placeholder="">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>Email Id</label>
+      <input type="email" name="" class="form-control" id="" placeholder="info@orangehrm.com">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>Fax</label>
+      <input type="text" name="" class="form-control" id="" placeholder="">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>Address Street 1</label>
+      <input type="text" name="" class="form-control" id="" placeholder="238 Teal Plaza Corner">
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>City</label>
+      <select class="form-control"> <option>New York</option></select>
+    </div>
+    
+    <div class="form-group col-md-4">
+      <label>State/Province</label>
+      <select class="form-control"> <option>NJ</option></select>
+    </div>
+    
+     <div class="form-group col-md-4">
+      <label>Zip/Postal Code</label>
+      <input type="text" name="" class="form-control" id="" placeholder="">
+    </div>
+    
+     <div class="form-group col-md-4">
+      <label>Country</label>
+      <select class="form-control"> <option></option></select>
+    </div>
+    
+    <div class="form-group col-md-12">
+      <label>Note</label>
+      <!-- <input type="phone" name="" class="form-control" id="" placeholder=""> -->
+        <textarea class="form-control" rows="5" placeholder="HRM Software" id=""></textarea>
+
+    </div>
+    
+    
+<!-- select
+// textarea -->
+ <div class="form-group col-md-2 col-md-offset-8">   
+          <button class="btn btn-block active">Reset</button>
+    </div>
+    
+     <div class="form-group col-md-2">
+     <button class="btn btn-block">Save</button>
+    </div>
+
+
+  </div>
+  </form>
+                      </div>
+      
+                      <div id="tabs-2">
+                      <form>
+                     <div class="form-grid">
+                       <div class="form-group col-md-4">
+                           <label>Location Name</label>
+                           <input type="text" name="" class="form-control" id="" placeholder="OrangeHRM(pvt)Ltd">
+                        </div>
+                        
+                         <div class="form-group col-md-4">
+                          <label>City</label>
+                          <select class="form-control"> <option>Select</option></select>
+                        </div>
+                     
+                      
+                       <div class="form-group col-md-4">
+                          <label>Country</label>
+                          <select class="form-control"> <option>Select</option></select>
+                        </div>
+                        
+                        <div class="form-group col-md-2 col-md-offset-4">   
+                              <button class="btn btn-block active">Reset</button>
+                        </div>
+                        
+                         <div class="form-group col-md-2">
+                            <button class="btn btn-block">Search</button>
+                        </div>
+                        
+                        </div>
+                         <div class="clearfix"></div>
+                         </form>
+                         
+                        
+              
+                         <div class="row">
+              <form action="">
+              <div class="tableView">
+                <div class="col-xs-12 table-sub-header text-right">
+                  <button class="btn btn-sm active" capsOn>Delete</button>
+                  <button class="btn btn-sm" capsOn>Add</button>
+                        <hr />
+                  <div class="div">
+                    <div class="col-sm-2">
+                      <select class="form-control">
+                          <option value="">Filter</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-5">
+                      <div class="table-filter">
+                        <input type="text" class="form-control" placeholder="Search some stuff.">
+                      </div>
+                    </div>
+                    <div class="col-sm-2">
+                      <select class="form-control">
+                          <option value="">Filter</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-sm-3">
+                      <div class="text-right">
+                        showing <strong>1 -8</strong> rows
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-striped table-hover tableSite">
+                  <thead>
+                    <tr>
+
+                      <th>
+                        <label for="selectAll" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll" class="checkbox">
+                      </th>
+                      <th>Name</th>
+                      <th>City</th>
+                      <th>Country</th>
+                      <th>Phone</th>
+                      <th>Number Of Employees</th>
+ 
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <label for="selectAll-12" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-12" class="checkbox">
+                      </td>
+                      <td>Canadian Development Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="selectAll-13" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-13" class="checkbox">
+                      </td>
+                      <td>Canadian Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="selectAll-14" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-14" class="checkbox">
+                      </td>
+                      <td>Canadian Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="selectAll-15" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-15" class="checkbox">
+                      </td>
+                      <td>Canadian Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="selectAll-16" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-16" class="checkbox">
+                      </td>
+                      <td>Canadian Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="selectAll-17" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-17" class="checkbox">
+                      </td>
+                      <td>Canadian Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="selectAll-18" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-18" class="checkbox">
+                      </td>
+                      <td>Canadian Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <label for="selectAll-19" class="custom-checkbox">&nbsp;</label> 
+                        <input type="checkbox" name="selectAll" id="selectAll-19" class="checkbox">
+                      </td>
+                      <td>Canadian Center</td>
+                      <td></td>
+                      <td>Canada</td>
+                      <td></td>
+                      <td>5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </form>
+              </div>
+                       
+                      </div>
+      
+                      <div id="tabs-3">
+                        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+                        </div>
+                        <div id="tabs-4">
+                        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                        </div>
+                        <div id="tabs-5">
+                        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+                      </div>
+                  </div>
+              </div>
+
+  
+  
+   
+   
+    
+  
+
+    </aside>
+    
+  </div>
+</section>
+  
+
+
+<script src="js/build/global.min.js"></script>
+
+
+  </body>
+</html>

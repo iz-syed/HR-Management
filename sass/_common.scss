@@ -543,6 +543,21 @@ form {
 }
 
 
+.table-action {
+  margin:0 3px;
+
+  .trash {
+  	color:$red; }
+
+  .eye {
+  	color:$primary  }
+  .edit { 
+  	color:$secondary}
+
+}
+
+  
+ 
 
 
 
