@@ -40,7 +40,7 @@
       <!-- Sidebar / -->
 
     </aside>
-    <aside class="col-sm-9 col-md-10 cf test">
+    <aside class="col-sm-9 col-md-8 cf test">
 
         <div class="row">
           <div class="bg-white">
@@ -99,12 +99,31 @@
                 <div class="col-xs-12 table-sub-header text-right">
                   <button class="btn btn-sm" capsOn>Add</button>
                   <button class="btn btn-sm active" capsOn>Delete</button>
+                  <hr />
+                  <div class="div">
+                    <div class="col-sm-3">
+                      <select class="form-control">
+                          <option value="">Filter</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="table-filter">
+                        <input type="text" class="form-control" placeholder="Search some stuff.">
+                      </div>
+                    </div>
+                    <div class="col-sm-3">
+                      <div class="text-right">
+                        showing <strong>1 -8</strong> rows
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <table class="table table-striped table-hover tableSite">
                   <thead>
                     <tr>
 
                       <th>
+                        <span class="hide">Select</span|>
                         <label for="selectAll" class="custom-checkbox">&nbsp;</label> 
                         <input type="checkbox" name="selectAll" id="selectAll" class="checkbox">
                       </th>
@@ -219,6 +238,18 @@
               </form>
               </div>
 
+              <div class="text-right">
+                <ul class="pagination">
+                  <li><a href="#0">Previous</a></li>
+                  <li><a href="#0">1</a></li>
+                  <li><a href="#0">2</a></li>
+                  <li><a href="#0">3</a></li>
+                  <li><a href="#0" class="active">4</a></li>
+                  <li><a href="#0">5</a></li>
+                  <li><a href="#0">Next</a></li>
+                </ul>
+              </div>
+
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, pariatur, unde. Quasi, officiis. Excepturi libero, illo nam, numquam quis sit fugit. Quibusdam facere fugit inventore sed non, pariatur veniam laudantium asperiores iste amet omnis odio illo nostrum cum hic illum veritatis officiis, recusandae, nesciunt alias minus. Aperiam perferendis libero eligendi, aut illo culpa dolorem quia, quasi numquam laboriosam consectetur eius quod et, facere voluptates vitae architecto, neque eaque aliquam ipsam voluptatum tempore dicta? Saepe esse eos consequatur dolorum dignissimos, suscipit sit similique adipisci beatae modi consectetur dolorem velit fugit quam vitae! Maxime similique porro suscipit tenetur fugit, quo minus veniam!</p>
 
         <h1>Lorem ipsum dolor sit amet</h1>
@@ -272,17 +303,7 @@
 
 
 
-        <div class="text-right">
-          <ul class="pagination">
-            <li><a href="#0">Previous</a></li>
-            <li><a href="#0">1</a></li>
-            <li><a href="#0">2</a></li>
-            <li><a href="#0">3</a></li>
-            <li class="active"><a href="#0">4</a></li>
-            <li><a href="#0">5</a></li>
-            <li><a href="#0">Next</a></li>
-          </ul>
-        </div>
+        
 
         <div class="file-upload">
           <img id="target"/>
@@ -389,6 +410,10 @@
          
     
 
+    </aside>
+
+    <aside class="col-md-2 cf test">
+        0000
     </aside>
   </div>
 </section>

@@ -134,6 +134,8 @@ $asset-base-path: '../assets' !default;
   padding-top: 15px;
   padding-bottom: 15px;
   border-bottom:1px solid rgba($secondary, 0.3);
+
+
 }
 
 .tableView {
@@ -326,18 +328,17 @@ svg.custom-svg path {fill: $green !important; stroke:$white !important;}
     height:45px;
       box-shadow:0 0 0 transparent;
 
-    &:hover, &:focus {
-      border-color:transparent;
-      box-shadow:0 0 0 transparent;
-    }
-  }
+      &:hover, &:focus {
+        border-color:transparent;
+        box-shadow:0 0 0 transparent;
+      } // top-search input :hover :focus
+
+  } // top-search input
 
   .form-group {
     margin-top: 25px;
     margin-bottom: 25px;
     position: relative;
-
-
 
       &:before {
       display: inline-block;
@@ -350,13 +351,39 @@ svg.custom-svg path {fill: $green !important; stroke:$white !important;}
         position: absolute;
         left: 20px;
         top: 30%;
-      }
-  }
+      } // top-search > form group:before
+  } // top-search > form group
 
 
 }
 
 
+
+hr {
+  border-color:rgba($secondary, 0.3)
+}
+
+
+.table-filter {
+  position: relative;
+
+  input {
+    padding-left: 35px;
+  } // table-filter input
+
+  &:before {
+      display: inline-block;
+      font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+      font-size: inherit; // can't have font-size inherit on line above, so need to override
+      text-rendering: auto; // optimizelegibility throws things off #1094
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+        content: $fa-var-search;
+        position: absolute;
+        left: 10px;
+        top: 30%;
+      } // table-filter :before
+} // table-filter
 
 
 

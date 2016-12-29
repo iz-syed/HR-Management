@@ -405,16 +405,18 @@ a {
   	a {
   		color:$secondary;
 
+
   		&:hover {
   			background-color:transparent;
   			color:$primary;
-
   		}
   	}
   }
 
   li {
-  	display: inline;
+  	display: inline-block;
+  	margin-right: 5px;
+  	cursor: pointer;
 
 	  &.active {
 	  	a {
@@ -430,12 +432,13 @@ a {
 		line-height: 1.428571429;
 		color: $primary;
 		text-decoration: none;
-		background-color: $white;
+		// background-color: $white;
+		cursor: pointer;
 
-		&:hover {
+		&:hover, &.active {
 			z-index: 2;
 			color: $white;
-			cursor: default;
+			// cursor: default;
 			background-color: $primary;
 			@include border-radius(50%);
 		} // paginatation :hover
@@ -526,6 +529,10 @@ form {
 
 [capsOn] {	text-transform:uppercase; }
 [capsOff] {	text-transform:lowecase; }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background-color: rgba($secondary, 0.1)
+}
 
 
 

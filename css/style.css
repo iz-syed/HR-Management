@@ -7476,7 +7476,9 @@ a {
       background-color: transparent;
       color: #2ea2de; }
   .pagination li {
-    display: inline; }
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer; }
     .pagination li.active a {
       -moz-border-radius: 50%;
       -webkit-border-radius: 50%;
@@ -7489,11 +7491,10 @@ a {
       line-height: 1.428571429;
       color: #2ea2de;
       text-decoration: none;
-      background-color: #fff; }
-      .pagination li a:hover {
+      cursor: pointer; }
+      .pagination li a:hover, .pagination li a.active {
         z-index: 2;
         color: #fff;
-        cursor: default;
         background-color: #2ea2de;
         -moz-border-radius: 50%;
         -webkit-border-radius: 50%;
@@ -7556,6 +7557,9 @@ form [required]:after {
 
 [capsOff] {
   text-transform: lowecase; }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: rgba(106, 121, 135, 0.1); }
 
 /* Basic CSS */
 .tb-row {
@@ -7746,4 +7750,23 @@ svg.custom-svg path {
     content: "";
     position: absolute;
     left: 20px;
+    top: 30%; }
+
+hr {
+  border-color: rgba(106, 121, 135, 0.3); }
+
+.table-filter {
+  position: relative; }
+  .table-filter input {
+    padding-left: 35px; }
+  .table-filter:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "";
+    position: absolute;
+    left: 10px;
     top: 30%; }
