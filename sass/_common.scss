@@ -527,8 +527,16 @@ form {
 
 
 
-[capsOn] {	text-transform:uppercase; }
-[capsOff] {	text-transform:lowecase; }
+[capsOn] {	
+	text-transform:uppercase }
+[capsOff] {	
+	text-transform:lowecase }
+
+[align="right"] { 
+	text-align:right !important}
+
+[align="left"] { 
+	text-align:left !important}
 
 .table-striped > tbody > tr:nth-of-type(odd) {
 	background-color: rgba($secondary, 0.1)

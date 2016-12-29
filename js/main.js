@@ -180,17 +180,23 @@ $(function(){
     $('#tabs').tabs();
 
     // jQueryUI Check box + Radio Boxes
-   	$('checkbox').checkboxradio({ icon: false });
-   	$('radio').checkboxradio({ icon: false });
+   	// $('checkbox').checkboxradio({ icon: false });
+   	// $('radio').checkboxradio({ icon: false });
+    	$("#forGot").checkboxradio({ icon: false });
+    	$(".radio").checkboxradio({ icon: false });
+    	$(".checkbox").checkboxradio({ icon: false });
+
+   	// custom dropdown 
+   	$(".dropbtn").on("click",function(){
+    	var id = $(this).nextAll(".dropdown-content").attr("id");
+    	document.getElementById(id).classList.toggle("show");
+  	});
 
 
    	
 
 
 	 $( function() {
-    	$("#forGot").checkboxradio({ icon: false });
-    	$(".radio").checkboxradio({ icon: false });
-    	$(".checkbox").checkboxradio({ icon: false });
   	} );
 
   // $( function() {
