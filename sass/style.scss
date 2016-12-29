@@ -129,9 +129,15 @@ $asset-base-path: '../assets' !default;
 
 // Table
 
+.table-sub-header {
+  background-color:rgba($primary, 0.1);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom:1px solid rgba($secondary, 0.3);
+}
+
 .tableView {
-  // padding:45px 0;
-  border:1px solid rgba($secondary, 0.5);
+  border:1px solid rgba($secondary, 0.3);
   margin:25px;
   @include border-radius(5px);
 
@@ -139,14 +145,17 @@ $asset-base-path: '../assets' !default;
     padding-bottom:25px; }
 
     .tableSite {
+      th {
+        color:$primary;
+      }
       th, td {
         // border:1px solid rgba($secondary, 0.3); 
-        text-align:center; 
+        // text-align:center; 
         padding:10px;
       }
 
       th:last-child {
-        text-align: left; 
+        // text-align: left; 
         // padding-left: 20px;
       }
     }

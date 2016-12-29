@@ -7551,6 +7551,12 @@ form [required]:after {
   padding: 25px 35px;
   background-color: rgba(46, 162, 222, 0.1); }
 
+[capsOn] {
+  text-transform: uppercase; }
+
+[capsOff] {
+  text-transform: lowecase; }
+
 /* Basic CSS */
 .tb-row {
   display: table; }
@@ -7559,19 +7565,24 @@ form [required]:after {
   display: table-cell;
   vertical-align: middle; }
 
+.table-sub-header {
+  background-color: rgba(46, 162, 222, 0.1);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(106, 121, 135, 0.3); }
+
 .tableView {
-  border: 1px solid rgba(106, 121, 135, 0.5);
+  border: 1px solid rgba(106, 121, 135, 0.3);
   margin: 25px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
   .tableView h1 {
     padding-bottom: 25px; }
+  .tableView .tableSite th {
+    color: #2ea2de; }
   .tableView .tableSite th, .tableView .tableSite td {
-    text-align: center;
     padding: 10px; }
-  .tableView .tableSite th:last-child {
-    text-align: left; }
   .tableView .imageAside p:last-of-type {
     padding-bottom: 0; }
 
