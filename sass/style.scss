@@ -11,6 +11,7 @@
 @import "bootstrap/type";
 @import "bootstrap/code";  
 @import "bootstrap/grid";
+@import "bootstrap/tables";
 
 // Core variables and mixins
 // @import "bootstrap/variables";
@@ -112,7 +113,7 @@ $asset-base-path: '../assets' !default;
 /// @access public
 /// @param {String} $file - Asset file name, including extension
 /// @return {URL} - A `url()` function leading to the font
-/// @require {function} asset
+/// @require {function} asset 
 @function font($file) {
   @return asset('fonts', $file);
 }
@@ -129,21 +130,24 @@ $asset-base-path: '../assets' !default;
 // Table
 
 .tableView {
-  padding:45px 0;
+  // padding:45px 0;
+  border:1px solid rgba($secondary, 0.5);
+  margin:25px;
+  @include border-radius(5px);
 
   h1 { 
     padding-bottom:25px; }
 
     .tableSite {
       th, td {
-        border:1px solid $brown; 
+        // border:1px solid rgba($secondary, 0.3); 
         text-align:center; 
-        padding:15px 10px;
+        padding:10px;
       }
 
       th:last-child {
         text-align: left; 
-        padding-left: 20px;
+        // padding-left: 20px;
       }
     }
     
@@ -166,9 +170,9 @@ $asset-base-path: '../assets' !default;
 
 @media screen and (max-width:540px) {
 	.tableSite thead { display:none; }
-	.tableSite td { border:none; display:block; position: relative; padding-left: 40%; text-align: left; }
-	.tableSite td:before { content:attr(data-title); position: absolute; left: 15px; width: 40%; }
-	.tableSite td:last-child { border-bottom:2px solid #d5cdbd; padding-left:40%; width:100%; }
+	.tableSite td { border:none; display:block; position: relative; padding-left: 40%;  width:100%; text-align: right !important; }
+	.tableSite td:before { content:attr(data-title); position: absolute; left: 15px; width: 40%; color:$primary; text-align: left; }
+	.tableSite td:last-child { border-bottom:3px solid rgba($secondary, 0.5); padding-left:40%; }
 }
 
 // [data-role="banner"] {
@@ -222,7 +226,9 @@ svg.custom-svg path {fill: $green !important; stroke:$white !important;}
       }
       border-bottom:1px solid rgba($white, 0.1);
       @include transition(background-color .3s ease);
-      padding:0 15px;
+      padding:0 30px;
+      margin-left: -15px;
+      margin-right: -15px;
 
       &:hover {
           background-color: rgba($white, 0.1);
@@ -301,6 +307,45 @@ svg.custom-svg path {fill: $green !important; stroke:$white !important;}
           line-height:38px; }
 
 } //form-login
+
+// top-search
+
+.top-search {
+  input[type='search'] {
+    border-color:transparent;
+    padding-left: 55px;
+    height:45px;
+      box-shadow:0 0 0 transparent;
+
+    &:hover, &:focus {
+      border-color:transparent;
+      box-shadow:0 0 0 transparent;
+    }
+  }
+
+  .form-group {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: relative;
+
+
+
+      &:before {
+      display: inline-block;
+      font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+      font-size: inherit; // can't have font-size inherit on line above, so need to override
+      text-rendering: auto; // optimizelegibility throws things off #1094
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+        content: $fa-var-search;
+        position: absolute;
+        left: 20px;
+        top: 30%;
+      }
+  }
+
+
+}
 
 
 

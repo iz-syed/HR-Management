@@ -212,6 +212,14 @@ $break-xs: 767px;
 
 // Transitions
 
+
+// bg colors
+
+.bg-white {
+	background-color:$white;
+	@include clearfix;
+}
+
 @mixin transition($args...) {
   -webkit-transition: $args;
   -moz-transition: $args;
@@ -235,7 +243,7 @@ a {
 } // usage
   //  @include opacity(0.8);
 
-.test { border:1px solid red}
+.test { border:1px solid $red; @include clearfix;}
 
 // Listing
 .listing {
@@ -522,6 +530,10 @@ form {
 
 // .container { margin:0 auto; padding-left:15px; padding-right:15px;}
 @media (max-width: 1024px){
-    // .container{width:auto}
+     // .container{width:auto}
+
+     // .test {
+     // 	padding: 0;
+     // }
 
 }
