@@ -15,6 +15,8 @@ module.exports = function(grunt) {
               'js/lib/jquery-ui.js',
               'js/lib/slick.min.js',
               'js/lib/smoothscroll.js',
+              //'js/lib/moment.js',
+              //'js/lib/daterangepicker.js',
               'js/main.js'
           ],
         dest: 'js/build/global.min.js'

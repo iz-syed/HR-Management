@@ -33,7 +33,7 @@
 
 // Components
 // @import "bootstrap/component-animations";
-// @import "bootstrap/dropdowns";
+   @import "bootstrap/dropdowns";
 // @import "bootstrap/button-groups";
 // @import "bootstrap/input-groups";
 // @import "bootstrap/navs";
@@ -83,6 +83,10 @@
 @import "variables";
 @import "forms";
 @import "common";
+
+// Daterangepicker
+@import "daterangepicker";
+
 
 /// Base path for assets (fonts, images...),
 /// should not include trailing slash
@@ -135,6 +139,23 @@ $asset-base-path: '../assets' !default;
   padding-bottom: 15px;
   border-bottom:1px solid rgba($secondary, 0.3);
 
+  a {
+      margin:0 5px;
+    i {
+         -moz-transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        margin-right:5px;
+    }
+  }
+  
+
+  .form-control {
+      @media (max-width: $break-xs) {
+        margin-bottom: 15px;
+      }
+  }
+
 
 }
 
@@ -155,6 +176,7 @@ $asset-base-path: '../assets' !default;
         // border:1px solid rgba($secondary, 0.3); 
         // text-align:center; 
         padding:10px;
+        font-size:14px;
       }
 
       th:last-child {
@@ -514,8 +536,8 @@ hr {
 
 .custom-dropdwon {
   position: absolute;
-  right: 5px;
-  bottom: -5px;
+  right: -10px;
+  bottom: -10px;
 
   i {
     color: $white;
@@ -534,6 +556,8 @@ hr {
 
 .user-pic {
   padding-top: 25px;
+  position: relative;
+  z-index: 999;
   img {
     max-width:48px;
     max-height:48px;
@@ -542,6 +566,45 @@ hr {
     box-shadow: 0px 8px 16px 0px rgba($secondary, 0.2);
   } // user-pic img
 } // user-pic
+
+
+
+// .payroll-record{ background:$white;}
+
+.payroll{ 
+  margin: 25px; 
+  border:1px solid rgba($secondary, 0.3); 
+  border-radius:5px; 
+  background:$white-semi;}
+
+.payroll-add{
+  border-bottom:1px solid rgba($secondary, 0.3);
+  form {
+    padding: 15px
+  } // payroll-add fornm
+} // payroll-add
+
+
+.empty-record {
+  background:white;
+  border-radius:10px;
+  padding:15px;
+  min-height:250px;
+
+  p {
+    line-height: 240px;
+    padding-bottom: 0;
+  } // empty-record p
+} // empty-record
+
+
+
+.table-timesheet  {
+ input {
+   max-width:70px;
+ }  // table-timesheet
+} // table-timesheet
+
 
 
 

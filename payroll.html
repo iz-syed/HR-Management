@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>HR Management Organisation List</title>
+<script src="js/modernizr-2.8.3.js"></script>
+<!-- Bootstrap -->
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<section class="container-fluid">
+  <div class="row">
+    <aside class="col-sm-3 col-md-2 leftCol"> 
+      <!-- / Sidebar -->
+      <div class="row sidebar">
+        <div class="logo">
+          <h1> <a href="index.html"> <img src="assets/images/logo.png" alt="HR Management" /> </a> </h1>
+        </div>
+        <nav>
+          <ul class="sidebar-menu">
+            <li><a href="#0"><i class="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="#0"><i class="fa fa-users"></i> Organisation <i class="fa fa-angle-down trigger"></i></a>
+              <ul class="sidebar-submenu">
+                <li><a href="">Organisation</a></li>
+                <li><a href="">Location</a></li>
+                <li><a href="">Working Days</a></li>
+                <li><a href="">Leave List</a></li>
+                <li><a href="">Structure</a></li>
+              </ul>
+            </li>
+            <li><a href="#0"><i class="fa fa-user"></i> Employees <i class="fa fa-angle-down trigger"></i></a>
+              <ul class="sidebar-submenu">
+                <li><a href="">Employees</a></li>
+                <li><a href="">Employee Master</a></li>
+                <li><a href="">Employee Taxes</a></li>
+                <li><a href="">Manage Exits</a></li>
+                <li><a href="">Preview Payroll</a></li>
+                <li><a href="">More</a></li>
+              </ul>
+            </li>
+            <li><a href="#0"><i class="fa fa-clock-o"></i> Timesheet</a></li>
+            <li><a href="#0"><i class="fa fa-money"></i> Payroll<i class="fa fa-angle-down trigger"></i></a>
+              <ul class="sidebar-submenu">
+                <li><a href="">Payroll</a></li>
+                <li><a href="">Listing</a></li>
+                <li><a href="">Add</a></li>
+                <li><a href="">Payslip View</a></li>
+              </ul>
+            </li>
+            <li><a href="#0"><i class="fa fa-sticky-note"></i> Reports <i class="fa fa-angle-down trigger"></i></a>
+              <ul class="sidebar-submenu">
+                <li><a href="">Reports</a></li>
+                <li><a href="">Employees Export</a></li>
+                <li><a href="">Monthly Timesheet</a></li>
+                <li><a href="">Monthly Payroll</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Sidebar / --> 
+      
+    </aside>
+    <aside class="col-sm-9 col-md-10 cf">
+      <div class="row">
+        <div class="bg-white">
+          <div class="top-search col-sm-11">
+            <div class="form-group">
+              <input type="search" name="" class="form-control" id="" placeholder="Search for Project & Professional">
+            </div>
+          </div>
+          <div class="top-search text-right col-xs-1">
+            <div class="user-pic"> <a href="index.html"> <img src="assets/images/default-user.jpg" alt="HR Management" /> </a>
+              <div class="dropdown custom-dropdwon">
+                <button class="dropbtn"> <i class="fa fa-gear"></i></button>
+                <div id="userSettings" class="dropdown-content" align="right"> <a href="#my-list">My List</a> <a href="#settings">Settings</a> <a href="#signout">Sign Out</a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="breadcrumbs"> <a href="#"><i class="fa fa-home"></i></a> <a href="#">Payroll</a> </div>
+      </div>
+      <div class="row">
+        <div id="tabs" data-role="tab">
+          <ul>
+            <li><a href="#tabs-1">Listing</a></li>
+            <li><a href="#tabs-2">Add</a></li>
+            <li><a href="#tabs-3">Payslip View</a></li>
+          </ul>
+          <div id="tabs-1">
+            <div class="row">
+              <form action="">
+                <div class="tableView">
+                  <div class="col-xs-12 table-sub-header text-right">
+                    <button class="btn btn-sm active" capsOn>Delete</button>
+                    <button class="btn btn-sm" capsOn>Add</button>
+                    <hr>
+                    <div class="div">
+                      <div class="col-sm-2">
+                        <select class="form-control">
+                          <option value="">Filter</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-5">
+                        <div class="table-filter">
+                          <input type="text" class="form-control" placeholder="Search some stuff.">
+                        </div>
+                      </div>
+                      <div class="col-sm-2">
+                        <select class="form-control">
+                          <option value="">Filter</option>
+                        </select>
+                      </div>
+                      <div class="col-sm-3">
+                        <div class="text-right"> showing <strong>1 -8</strong> rows </div>
+                      </div>
+                    </div>
+                  </div>
+                  <table class="table table-striped table-hover tableSite">
+                    <thead>
+                      <tr>
+                        <th>Id</th>
+                        <th>Employee Name</th>
+                        <th>Organisation</th>
+                        <th>Emp Type</th>
+                        <th>Month / Year</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Rache Willis</td>
+                        <td>Xion</td>
+                        <td>Contract</td>
+                        <td>Mar / 2016</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Rache Willis</td>
+                        <td>Xion</td>
+                        <td>Contract</td>
+                        <td>Mar / 2016</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Xion</td>
+                        <td>Florida, US</td>
+                        <td>1200</td>
+                        <td>Active</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Rache Willis</td>
+                        <td>Xion</td>
+                        <td>Contract</td>
+                        <td>Mar / 2016</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Rache Willis</td>
+                        <td>Xion</td>
+                        <td>Contract</td>
+                        <td>Mar / 2016</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Rache Willis</td>
+                        <td>Xion</td>
+                        <td>Contract</td>
+                        <td>Mar / 2016</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Rache Willis</td>
+                        <td>Xion</td>
+                        <td>Contract</td>
+                        <td>Mar / 2016</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                      <tr>
+                        <td>#F568</td>
+                        <td>Rache Willis</td>
+                        <td>Xion</td>
+                        <td>Contract</td>
+                        <td>Mar / 2016</td>
+                        <td><a href="#0" class="table-action"><i class="fa fa-eye eye"></i></a> <a href="#0" class="table-action"><i class="fa fa-trash-o trash"></i></a> <a href="#0" class="table-action"><i class="fa fa-cloud-download"></i></a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="tabs-2">
+            <div class="row">
+              <div class="payroll">
+                <div class="payroll-add">
+                  <form>
+                    <div class="form-grid">
+                      <div class="form-group col-md-4">
+                        <label>Location Name</label>
+                        <select class="form-control">
+                          <option>Select</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>City</label>
+                        <select class="form-control">
+                          <option>Select</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>Country</label>
+                        <select class="form-control">
+                          <option>Select</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2 col-md-offset-4">
+                        <button class="btn btn-block active">Reset</button>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <button class="btn btn-block">Submit</button>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                  </form>
+                </div>
+                <div class="payroll-record">
+                  <div class="empty-record">
+                    <p class="text-center"> No Records Found</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+           <div id="tabs-3">
+           
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni corporis quibusdam, vero voluptate. Dolor recusandae ea officiis illum, consequatur, totam, sunt alias non esse nulla, aliquid doloribus sit fugit aspernatur!</p>
+            <p>Facere suscipit dolore tempore, sequi. Tempora magnam, recusandae ab, rerum laborum rem repellat eos sit ullam ipsum, sapiente neque doloremque praesentium reiciendis dolor architecto porro perferendis fugit vero. Iste, quae.</p>
+            <p>Ad optio distinctio, explicabo suscipit asperiores iure pariatur, rem fugit totam aliquid! Culpa, quod minima omnis cum quia sint! Dolor maiores dicta possimus voluptas incidunt optio veniam, eligendi placeat quas.</p>
+           
+           </div>
+        </div>
+      </div>
+      <div class="text-right">
+        <ul class="pagination">
+          <li><a href="#0">Previous</a></li>
+          <li><a href="#0">1</a></li>
+          <li><a href="#0" class="active">2</a></li>
+          <li><a href="#0">3</a></li>
+          <li><a href="#0">4</a></li>
+          <li><a href="#0">5</a></li>
+          <li><a href="#0">Next</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<script src="js/build/global.min.js"></script>
+</body>
+</html>
