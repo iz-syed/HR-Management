@@ -8257,23 +8257,39 @@ form [required]:after {
   background-color: rgba(46, 162, 222, 0.1); }
 
 .quick-launch {
-  margin: 25px 0; }
+  margin: 25px 0;
+  text-align: center; }
   .quick-launch a {
-    display: block;
+    display: inline-block;
     max-width: 200px;
-    margin: 0 auto;
+    min-width: 190px;
+    margin: 15px;
     background-color: #fff;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    border: 1px solid rgba(106, 121, 135, 0.1);
+    border: 1px solid rgba(106, 121, 135, 0.3);
     text-align: center;
-    padding: 25px 0; }
+    padding: 25px 0;
+    box-shadow: 0px 8px 16px 0px rgba(106, 121, 135, 0.2); }
     .quick-launch a i {
       font-size: 62px; }
     .quick-launch a span {
       display: block;
       color: #2ea2de; }
+
+.graph-wrapper {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid rgba(106, 121, 135, 0.3);
+  box-shadow: 0px 8px 16px 0px rgba(106, 121, 135, 0.2);
+  margin-top: 15px;
+  margin-bottom: 45px; }
+  .graph-wrapper img {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px; }
 
 /* Dashboard main End */
 /* Basic CSS */
