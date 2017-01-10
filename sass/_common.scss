@@ -768,6 +768,75 @@ form {
 .form-box .custom-checkbox{ font-size: 15px}
 // Suresh
 
+// Timesheet
+.timesheetView{ margin:15px 5px;}
+
+.timesheet-record .input-group-btn{ 
+	display: table-cell; 
+	white-space:nowrap; 
+	width:1%;}
+
+.timesheet-record .form-control{ 
+	display: inline-block; 
+	width:50%; 
+	max-width:100%;}
+
+.timesheet-record .input-group{ 
+	display: table;}
+
+.timesheet-record .all-record{ 
+	background: #f7f7f9; 
+	padding:5px 10px 6px; 
+	border-left:1px solid #ccc; 
+  border-top:1px solid #ccc; 
+  border-bottom:1px solid #ccc; 
+  @include border-radius(2px);
+  font-size:14px}
+
+.all-record .caret{ margin: 0 0 0 30px}
+
+.dropdown-content-timesheet{ 
+	left:0; 
+	min-width:120px; 
+	right:auto;}
+
+.record-button{
+	border: 0;
+	background: none;
+	position: relative;
+	left: -40px;
+	margin-bottom: 0; 
+	top:2px;
+	@include border-radius(3px); 
+	color: $primary;}
+
+.record-query{ padding-right:45px;}
+
+.employee-list{ background: $primary;}
+
+.employee-list h1{ 
+	color: $white; 
+	font-size: 22px; 
+	padding:10px; 
+	margin-bottom:0; 
+	font-weight:normal}
+
+.employee-details{ margin: 25px}
+
+.employee-details table tr td:nth-of-type(2n+1){ 
+	background: #f5f5f5 }
+
+.employee-list-checkbox {
+     overflow: auto;
+     max-height:160px;
+}
+.employeeView{ 
+	border: 1px solid rgba($secondary, 0.3);
+	margin: 5px; 
+	@include border-radius(5px); }
+
+// Timesheet 
+
 /* Dashboard main Start */
 
 .run-payroll {
